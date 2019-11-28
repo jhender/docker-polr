@@ -2,7 +2,7 @@ version: '3.5'
 
 services:
     polr:
-        image: ajanvier/polr
+        image: jhender/polr
         container_name: polr
         ports:
             - "80:80"
@@ -14,6 +14,7 @@ services:
             - ADMIN_USERNAME=${ADMIN_USERNAME}
             - ADMIN_PASSWORD=${ADMIN_PASSWORD}
             - ADMIN_EMAIL=${ADMIN_EMAIL}
+            - APP_ADDRESS=
         depends_on:
             - mariadb
 
